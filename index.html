@@ -103,6 +103,19 @@
     <footer class="footer">
         <p>&copy; 2024 Sign Language Web App. All rights reserved.</p>
     </footer>
+    <script>
+        // Assuming your JSON file is in the same directory as your HTML file
+        fetch('model.json')
+        .then(response => response.json())
+        .then(data => {
+          // Access data from your JSON model here
+          console.log(data); // This will log the entire JSON object to the console
+      
+          // Example: Pre-populate a form field with data from the JSON
+          document.getElementById("myInput").value = data.name;
+        })
+        .catch(error => console.error(error));
+      </script>
 
 </body>
 
